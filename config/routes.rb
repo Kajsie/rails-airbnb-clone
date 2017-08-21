@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'bookings/index'
+  get 'index', to: 'bookings#index'
 
-  get 'bookings/create'
+  get 'new', to: 'bookings#new'
+
+  post 'create', to: 'bookings#create'
+
 
   devise_for :users
   root to: 'pages#home'
