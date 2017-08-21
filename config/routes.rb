@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  get 'index', to: 'bookings#index'
-
-  get 'new', to: 'bookings#new'
-
-  post 'create', to: 'bookings#create'
-
-
+    root to: 'pages#home'
   devise_for :users
-  root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :bookings, only: [:new, :create, :index]
+
+  resources :hairdressers, only: [:index]
+
 end
+
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
