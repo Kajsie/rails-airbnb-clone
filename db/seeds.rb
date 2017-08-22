@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+user = User.create(first_name: "kajsa", last_name: "k", email: "kajsa@wagon.com", password: "hellohello")
+
+
+  hairdresser = Hairdresser.new(description: "Worked in Paris for 5 years and specialise on short hair",
+   city: "London", location: "Salon Hairflair")
+
+  hairdresser.user = user
+  puts "did not save" unless hairdresser.save
+
+
