@@ -1,4 +1,81 @@
-<h2><%= @hairdresser.user.first_name %></h2> <h2><%= @hairdresser.user.last_name %></h2>
-  <p><%= @hairdresser.description %></p>
-  <p><%= @hairdresser.city %></p>
-  <p><%= @hairdresser.location %></p>
+<h2 class="name-heading text-center"><%= @hairdresser.user.first_name + " " + @hairdresser.user.last_name %></h2>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+
+      <%= image_tag "https://unsplash.it/200/300", class: "hairdresser-img"%>
+
+    </div>
+
+
+    <div class="col-xs-12 col-sm-6">
+
+      <p class="hairdresser-city"><%= @hairdresser.city %></p>
+      <p>You can find my in <%= @hairdresser.location %></p>
+
+      <p class="hairdresser-description">Some more information about myself: </p>
+      <p><%= @hairdresser.description %></p>
+
+    </div>
+
+  </div>
+
+
+  <div class="work-samples">
+    <div class="row">
+      <div class="col-xs-12 col-sm-11 col-sm-offset-1">
+        <h4>Some examples of my work:</h3>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+          <%= image_tag "https://unsplash.it/400/300", class: "sample-img"%>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+          <%= image_tag "https://unsplash.it/400/300", class: "sample-img"%>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+          <%= image_tag "https://unsplash.it/400/300", class: "sample-img"%>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="table-availabilities">
+
+    <table>
+      <tr>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+      </tr>
+      <tr>
+        <td>9:00</td>
+        <td>9:00</td>
+        <td>9:00</td>
+      </tr>
+      <tr>
+      <td>10:00</td>
+        <td>10:00</td>
+        <td>10:00</td>
+      </tr>
+      <tr>
+        <td>11:00</td>
+        <td>11:00</td>
+        <td>11:00</td>
+      </tr>
+    </table>
+
+
+  </div>
+
+    <br>
