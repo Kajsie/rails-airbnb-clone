@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :bookings, only: [:new, :create, :index]
 
-  resources :hairdressers, only: [:index]
+  resources :hairdressers, only: [:index, :show]
 
 end
 
