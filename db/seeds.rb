@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Availability.destroy_all
+Hairdresser.destroy_all
+
 user = User.create(first_name: "kajsa", last_name: "k", email: "kajsa@wagon.com", password: "hellohello")
 
 
@@ -15,8 +19,8 @@ user = User.create(first_name: "kajsa", last_name: "k", email: "kajsa@wagon.com"
   puts "did not save" unless hairdresser.save
 
 
-  availability = Availability.create(weekday: 1, open_time: 10:00, closing_time: 19:00)
+  # availability = Availability.create(weekday: 1, open_time: 10:00, closing_time: 19:00)
 
-  availability.hairdresser = hairdresser
+  # availability.hairdresser = hairdresser
   hairdresser.save
 
