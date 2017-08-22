@@ -1,2 +1,6 @@
-<h1>Bookings#create</h1>
-<p>Find me in app/views/bookings/create.html.erb</p>
+<h1>These are your bookings</h1>
+<ul>
+  <% @bookings.each do |booking| %>
+    <li><%= booking %></li>
+  <% end %>
+</ul>
