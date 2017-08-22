@@ -2,7 +2,10 @@
 <h1 class="page-heading">Hairdresser in [TO BE ADDED LATER]</h1>
 
 
-<!-- [Datepicker to be added later] -->
+<%= simple_form_for @hairdresser do |f| %>
+ <%= f.input :date, as: :string, input_html: { class: 'datepicker' } %>
+ <%= f.button :submit %>
+<% end %>
 
 
 <div class="container">

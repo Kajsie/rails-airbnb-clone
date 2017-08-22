@@ -3,7 +3,8 @@ class Hairdresser < ApplicationRecord
   has_many :bookings
   has_many :availabilities
 
-  def open?
-    if
-  end
+
+  #def open?
+   # if
+  # end
 end

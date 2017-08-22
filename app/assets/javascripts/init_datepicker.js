@@ -1,3 +1,6 @@
 $('.datepicker').datepicker({
-   <-- you can pass options here! Get them on the demo page by playing with settings
+   onSelect: function() {
+        var dateObject = $(this).datepicker('getDate');
+    }
 });
+
