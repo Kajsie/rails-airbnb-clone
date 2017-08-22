@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :availabilities, only: [:new, :create]
   end
 
+  get "hairdressers/search", to: "hairdressers#search"
 end
 
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
