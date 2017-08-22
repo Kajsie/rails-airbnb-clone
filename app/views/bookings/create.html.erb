@@ -1,6 +1,7 @@
-<h1>Book a Hairdresser</h1>
+<h1>Book a hairdresser</h1>
 
-<%= simple_form_for(@hairdresser) do |f| %>
-  <% f.input :name %>
+<%= simple_form_for [@booking, @hairdresser] do |f| %>
+  <%= f.input :hairdresser%>
+  <%= f.input :user_id%>
   <%= f.submit %>
 <% end %>

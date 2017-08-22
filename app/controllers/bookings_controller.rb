@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+
+  bookings = [ {user: you, hairdresser: Pablo},
+        {user: me, hairdressers: Alice}
+      ]
   def index
     @bookings = Booking.all
   end

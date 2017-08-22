@@ -1,5 +1,7 @@
-<ul>
-  <% @bookings.each do |booking| %>
-    <li><%= bookings.name %></li>
-  <% end %>
-</ul>
+<h1>Book a hairdresser</h1>
+
+<%= simple_form_for [@booking, @hairdresser] do |f| %>
+  <%= f.input :hairdresser%>
+  <%= f.input :user_id%>
+  <%= f.submit %>
+<% end %>
