@@ -2,25 +2,34 @@
   <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
 
-    <h2 class="text-center">Sign up</h2>
+      <h2 class="text-center">Sign up</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :first_name, required: true, autofocus: true %>
-        <%= f.input :last_name, required: true, autofocus: true %>
-        <%= f.input :email, required: true, autofocus: true %>
-        <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-        <%= f.input :password_confirmation, required: true %>
+        <%= f.label "First Name", class: "login-tag" %>
+        <%= f.input :first_name, required: true, autofocus: true, label: false %>
+        <%= f.label "Last Name", class: "login-tag" %>
+        <%= f.input :last_name, required: true, autofocus: true, label: false %>
+        <%= f.label "Email", class: "login-tag" %>
+        <%= f.input :email, required: true, autofocus: true, label: false %>
+        <%= f.label "Password", class: "login-tag" %>
+        <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: false %>
+        <%= f.label "Please confirm your password", class: "login-tag" %>
+        <%= f.input :password_confirmation, required: true, label: false %>
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Sign up" %>
+        <%= f.button :submit, "Sign up", class: "btn-primary" %>
       </div>
-    <% end %>
+      <% end %>
 
-    <%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
+
+      <br>
+      <br>
+
     </div>
   </div>
 </div>
