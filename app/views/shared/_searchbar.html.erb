@@ -1,6 +1,6 @@
 <div class="search-bar-wrapper">
    <div class="search">
-      <%= simple_form_for :search, url: hairdressers_search_path, method: :get, html: { class: 'form-inline' } do |f| %>
+      <%= simple_form_for :search, url: search_hairdressers_path, method: :get, html: { class: 'form-inline' } do |f| %>
         <div class="search-bar-bundle">
           <%= f.input :city, autofocus: true, placeholder: 'insert a city', label: false, input_html: { class: 'search-bar-input' } %>
           <%= button_tag class: 'search-button' do %>

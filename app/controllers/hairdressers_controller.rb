@@ -18,8 +18,8 @@ class HairdressersController < ApplicationController
   end
 
   def search
-    byebug
-    @hairdressers = Hairdresser.where(city: params[:query])
+    @hairdressers = Hairdresser.where(city: params[:search][:city])
+    render :index
   end
 
   private
