@@ -1,6 +1,13 @@
 /* Main navbar */
 $navbar-height: 70px;
 
+#brand-name {
+  color: #F9C4AC;
+  font-weight: bold;
+  margin-left: -775px;
+  margin-top: 15px;
+}
+
 .navbar-wagon {
   transition: all 0.3s ease;
   height: $navbar-height;
@@ -13,7 +20,7 @@ $navbar-height: 70px;
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 30px;
 }
 
 /* User Avatar */
@@ -38,7 +45,7 @@ $navbar-height: 70px;
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: #F9C4AC;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {

@@ -5,24 +5,32 @@
 
     <div class="col-xs-12 col-sm-3 col-sm-offset-1">
 
-      <%= image_tag "https://unsplash.it/200/300", class: "hairdresser-img"%>
+      <%= image_tag "placeholder_images/5.jpeg", class: "hairdresser-img" %>
 
     </div>
 
 
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-sm-5">
 
-      <p class="hairdresser-city"><%= @hairdresser.city %></p>
-      <p>You can find my in <%= @hairdresser.location %></p>
+      <p class="hairdresser-location">You can find me in <%= @hairdresser.location %></p>
+      <p><%= @hairdresser.city %></p>
 
       <p class="hairdresser-description">Some more information about myself: </p>
       <p><%= @hairdresser.description %></p>
 
     </div>
 
+    <div class="col-xs-12 col-sm-3 booking-calendar">
+
+      <%= image_tag "Calendar.png", class: "calendar-img"%>
+
+      <button type="button" class="btn btn-primary booking-btn">Continue to booking</button>
+
+    </div>
+
   </div>
-  
-   <h3>Check availability </h3>
+
+<!--    <h3>Check availability </h3> -->
 
   <!-- # simple_form_for [@hairdresser, @availability] do |f| %> -->
    <!-- # f.input :weekday, as: :string, input_html: { class: 'datepicker' } %> -->
@@ -41,49 +49,19 @@
       <div class="row">
 
         <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-          <%= image_tag "https://unsplash.it/400/300", class: "sample-img"%>
+          <%= image_tag "placeholder_images/1.jpeg", class: "sample-img"%>
         </div>
 
 
         <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-          <%= image_tag "https://unsplash.it/400/300", class: "sample-img"%>
+          <%= image_tag "placeholder_images/2.jpeg", class: "sample-img"%>
         </div>
 
         <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-          <%= image_tag "https://unsplash.it/400/300", class: "sample-img"%>
+          <%= image_tag "placeholder_images/6.jpeg", class: "sample-img"%>
         </div>
 
       </div>
 
     </div>
   </div>
-
-  <div class="table-availabilities">
-
-    <table>
-      <tr>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-      </tr>
-      <tr>
-        <td>9:00</td>
-        <td>9:00</td>
-        <td>9:00</td>
-      </tr>
-      <tr>
-      <td>10:00</td>
-        <td>10:00</td>
-        <td>10:00</td>
-      </tr>
-      <tr>
-        <td>11:00</td>
-        <td>11:00</td>
-        <td>11:00</td>
-      </tr>
-    </table>
-
-
-  </div>
-
-    <br>
