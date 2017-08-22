@@ -1,0 +1,16 @@
+
+<div class="column">
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+    <h1 class="text-center">Book a Hairdresser</h1>
+    <%= simple_form_for(@booking) do |f| %>
+    <%= f.association :hairdresser %>
+    <%= f.input :start_time %>
+    <%= f.input :end_time %>
+
+    <%= f.button :submit %>
+<% end %>
+
+    </div>
+  </div>
+</div>
