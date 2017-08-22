@@ -1,16 +1,19 @@
 .name-heading {
-
-margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
-.hairdresser-city {
-  font-size: 25px;
+.hairdresser-img {
+  height: 300px;
+}
+
+.hairdresser-location {
+  font-size: 23px;
   line-height: 0;
 }
 
 .hairdresser-description {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .work-samples {
@@ -25,4 +28,20 @@ margin-bottom: 70px;
 
 .table-availabilities {
   margin: 50px;
+}
+
+.calendar-img {
+  height: 250px;
+  margin-bottom: 15px;
+}
+
+.booking-btn {
+  margin: 10px;
+}
+
+.booking-calendar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
