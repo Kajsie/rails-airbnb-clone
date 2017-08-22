@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem "font-awesome-rails"
 gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
