@@ -5,6 +5,7 @@ class HairdressersController < ApplicationController
 
   def show
     @hairdresser = Hairdresser.find(params[:id])
+    @availability = Availability.new
   end
 
   def new
