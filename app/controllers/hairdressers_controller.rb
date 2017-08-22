@@ -4,7 +4,7 @@ class HairdressersController < ApplicationController
   end
 
   def show
-    @hairdresser = Hairdresser.find(:id)
+    @hairdresser = Hairdresser.find(params[:id])
   end
 
   def new
@@ -15,6 +15,8 @@ class HairdressersController < ApplicationController
     @hairdresser = Hairdresser.new(hairdresser_params)
     @hairdresser.save
   end
+
+  private
 
   def hairdresser_params
     params.require(:hairdresser).permit(:name, :description, :city, :location)
