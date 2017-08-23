@@ -12,6 +12,7 @@
   opacity: 0.9;
 }
 .card-user {
+  border-radius: 10px;
   position: absolute;
   right: 10px;
   bottom: 10px;
@@ -20,6 +21,7 @@
   border: solid white 1px;
 }
 .card-hairdresser {
+  border-radius: 50px;
   position: absolute;
   top: 15px;
   left: 15px;
@@ -71,6 +73,7 @@
 }
 
 .card .card-image:hover .card-hover {
+  border-radius: 10px;
   display: block;
   opacity: 1;
 }
