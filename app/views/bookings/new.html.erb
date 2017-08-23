@@ -1,15 +1,12 @@
 <div class="container" style="border:thin">
   <div class="column">
   <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-    <h1 class="text-center">Book a Hairdresser</h1>
+    <div class="col-xs-6 col-xs-offset-4">
+    <h1>Book a Hairdresser</h1>
     <%= simple_form_for(@booking) do |f| %>
     <%= f.input :start_time %>
     <%= f.input :end_time %>
-    <button type="button" class="btn btn-primary">
-        Submit
-      </button>
-
+    <%= link_to "Submit", bookings_path%>
     <% end %>
 
     </div>

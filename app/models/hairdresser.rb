@@ -2,9 +2,9 @@ class Hairdresser < ApplicationRecord
   belongs_to :user
   has_many :bookings
   has_many :availabilities
-  validates_presence_of :city, :location, :description
+  validates :city, :location, :description, presence: true
 
-  #def open?
+  #def open?,
    # if
   # end
 end
