@@ -1,7 +1,19 @@
 class HairdressersController < ApplicationController
+
   def index
-    @hairdressers = Hairdresser.all
+    @hairdressers = Hairdresser.where.not(latitude: nil, longitude: nil)
+
+puts ENV['GOOGLE_API_BROWSER_KEY']
+
+    @hash = Gmaps4rails.build_markers(@hairdressers) do |hairdresser, marker|
+      marker.lat hairdresser.latitude
+      marker.lng hairdresser.longitude
+      # marker.infowindow render_to_string(partial: "/hairdressers/map_box", locals: { flat: flat })
+    end
   end
+  # def index
+  #   @hairdressers = Hairdresser.all
+  # end
 
   def show
     @hairdresser = Hairdresser.find(params[:id])
