@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_one :hairdresser
   has_many :bookings
+  validates_presence_of :first_name, :last_name
 end

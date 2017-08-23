@@ -14,6 +14,7 @@
 
       <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/200/300');">
 
+        <%= link_to(hairdresser) do %>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/tgenaitay", class: "card-user"%>
         <div class="card-hover">
          <div class="card-hairdresser">
@@ -30,7 +31,6 @@
               Specialty: ....
             </p>
           </div>
-          <%= link_to "", "#", class: "card-link" %>
         </div>
       </div>
       <div class="card-hairdresser">
@@ -40,6 +40,7 @@
         </h2>
       </div>
     </div>
+
   </div>
 
   <% end %>
