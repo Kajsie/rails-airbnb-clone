@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
   root to: 'pages#home'
   devise_for :users
-  resources :bookings, only: [:new, :create, :index]
+  resources :bookings, only: [:new, :create, :index, :destroy]
 
   resources :hairdressers, only: [:index, :show] do
     collection do

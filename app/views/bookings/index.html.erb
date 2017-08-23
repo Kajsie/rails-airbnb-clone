@@ -4,16 +4,17 @@
       <h1>Confirmation</h1>
 
  <div class="message">
-  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/random">
+
+  <%= render 'shared/hairdresser' %>
   <div class="message-name">
-    <h3>You booked - Christian</h3>
-    <p>Date: 23 Aug 17 </p>
+    <h3>You booked - Christian Baker</h3>
+    <p>Date: <%=Date.today %> </p>
   </div>
   <div class="message-body">
-    <p>Time</p>
+    <p><%= Time.now %></p>
   </div>
+  <%= link_to "Delete", root_path %>
 </div>
-      </ul>
     </div>
   </div>
 </div>
