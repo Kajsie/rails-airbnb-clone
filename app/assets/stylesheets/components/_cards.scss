@@ -17,6 +17,7 @@
   right: 10px;
   bottom: 10px;
   width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: solid white 1px;
 }
@@ -73,7 +74,6 @@
 }
 
 .card .card-image:hover .card-hover {
-  border-radius: 10px;
   display: block;
   opacity: 1;
 }

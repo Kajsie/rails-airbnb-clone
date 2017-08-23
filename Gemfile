@@ -22,6 +22,12 @@ gem 'uglifier'
 gem "font-awesome-rails"
 gem 'bootstrap-datepicker-rails'
 
+gem 'cloudinary'
+
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
