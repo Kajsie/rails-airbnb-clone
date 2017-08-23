@@ -1,7 +1,7 @@
 .search-button {
   background: none;
   border: none;
-  color: #e5e1da;
+  color: #474168;
   font-size: 20px;
 }
 
@@ -15,3 +15,6 @@
   margin-right: -45px;
 }
 
+.search-bar-input:focus {
+  border: none;
+}
