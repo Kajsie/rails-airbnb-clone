@@ -18,14 +18,18 @@ class HairdressersController < ApplicationController
   end
 
   def search
-    @hairdressers = Hairdresser.where(city: params[:search][:city].capitalize)
-    render :index
+    if params[:search][:city].blank?
+      redirect_to hairdressers_path
+    else
+      @hairdressers = Hairdresser.where(city: params[:search][:city].capitalize)
+      render :index
+    end
   end
 
   private
 
   def hairdresser_params
-    params.require(:hairdresser).permit(:description, :city, :location)
+    params.require(:hairdresser).permit(:description, :city, :location, :photo)
   end
 
 end
