@@ -1,5 +1,5 @@
 
-<h1 class="page-heading">Hairdresser in <%= params[:search][:city] %></h1>
+<h1 class="page-heading">Hairdressers in <%= params[:search][:city] %></h1>
 
 
 
@@ -25,10 +25,10 @@
           </div>
           <div class="card-description">
             <p>
-              Opening hours: ....
+              <br><b>Location:</b></br> <%= hairdresser.location %>
             </p>
             <p>
-              Specialty: ....
+              <br><b>Description:</b></br> <%= hairdresser.description %>
             </p>
           </div>
         </div>
