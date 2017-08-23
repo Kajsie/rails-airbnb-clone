@@ -5,6 +5,9 @@ class Hairdresser < ApplicationRecord
   has_many :availabilities
   validates :city, :location, :description, presence: true
 
+  geocoded_by :city
+  # after_validation :geocode, if: :address_changed?
+
   #def open?,
    # if
   # end
