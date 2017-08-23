@@ -18,7 +18,7 @@ class HairdressersController < ApplicationController
   end
 
   def search
-    @hairdressers = Hairdresser.where(city: params[:search][:city])
+    @hairdressers = Hairdresser.where(city: params[:search][:city].capitalize)
     render :index
   end
 
