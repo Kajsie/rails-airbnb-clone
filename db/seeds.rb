@@ -33,7 +33,8 @@ hairdresser_1.background =
 puts "did not save" unless hairdresser_1.save
 
 
-hairdresser_2 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Electric")
+
+hairdresser_2 = Hairdresser.new(description: "Specialized in hair coloring", city: "London", location: "Salon Hairflair")
 
 hairdresser_2.user = user_2
 puts "did not save" unless hairdresser_2.save
