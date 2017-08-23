@@ -7,7 +7,8 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4">
 
-     <!-- @hairdressers.each do |hairdresser| -->
+     <% @hairdressers.each do |hairdresser| %>
+
 
      <div class="card">
 
@@ -17,8 +18,9 @@
         <div class="card-hover">
          <div class="card-hairdresser">
           <h2>
-            FirstName LastName
-          </h2>
+            <%= hairdresser.user.first_name + " " +
+            hairdresser.user.last_name
+          %></h2>
         </div>
         <div class="card-description">
           <p>
@@ -32,11 +34,14 @@
       </div>
     </div>
     <div class="card-hairdresser">
-      <h2>FirstName LastName</h2>
+      <h2><%= hairdresser.user.first_name + " " +
+            hairdresser.user.last_name
+          %>
+      </h2>
     </div>
   </div>
 
-  <!-- end -->
+  <% end %>
 </div>
 
 <!-- FROM HERE DELETE -->

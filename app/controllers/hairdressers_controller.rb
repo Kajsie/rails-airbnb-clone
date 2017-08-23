@@ -17,6 +17,11 @@ class HairdressersController < ApplicationController
     @hairdresser.save
   end
 
+  def search
+    @hairdressers = Hairdresser.where(city: params[:search][:city])
+    render :index
+  end
+
   private
 
   def hairdresser_params
