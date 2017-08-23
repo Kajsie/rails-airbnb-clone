@@ -15,4 +15,10 @@ class BookingsController < ApplicationController
       render "new"
     end
   end
+
+  private
+
+  def booking_params
+    params.require(:hairdresser).permit(:date, :time)
+  end
 end
