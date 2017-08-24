@@ -77,6 +77,21 @@
   .has-events {}
 }
 
+.calendar-heading {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
 .calendar-heading a:hover {
   text-decoration: none;
+}
+
+.table-striped thead tr th {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  font-weight: lighter;
+}
+
+.table-striped tbody tr td {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  font-weight: lighter;
 }
