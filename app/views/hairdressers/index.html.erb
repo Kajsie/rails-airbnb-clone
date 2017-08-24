@@ -15,7 +15,7 @@
                     <%= cl_image_tag hairdresser.photos.first.path, width: 400, height: 300, crop: :fit, class: "card-user" %>
                     <div class="card-hover">
                      <div class="card-hairdresser">
-                        <h2><%= hairdresser.user.try(:first_name) %> <%= hairdresser.user.try(:last_name) %> </h2>
+                        <h2><%= hairdresser.user.first_name %> <%= hairdresser.user.last_name %> </h2>
                       </div>
                       <div class="card-description">
                         <p>
