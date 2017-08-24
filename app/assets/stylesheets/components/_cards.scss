@@ -12,12 +12,6 @@
   opacity: 0.9;
 }
 
-.card .card-image-avatar {
-  height: 175px;
-  display: inline;
-  opacity: 0.9;
-}
-
 .card-user {
   border-radius: 10px;
   position: absolute;
@@ -64,25 +58,7 @@
   color: black;
 }
 
-.card .card-image-avatar .card-hover {
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  background-color: rgba(255,255,255,0.8);
-  transition: opacity 300ms ease;
-  color: black;
-}
-
 .card .card-image {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card .card-image-avatar {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -103,7 +79,6 @@
   opacity: 1;
 }
 
-.card .card-image-avatar:hover .card-hover {
-  display: block;
-  opacity: 1;
+.card-avatar {
+  display: inline;
 }
