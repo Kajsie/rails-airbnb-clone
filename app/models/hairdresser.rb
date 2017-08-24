@@ -1,5 +1,5 @@
 class Hairdresser < ApplicationRecord
-  has_attachment :photo
+  has_attachments :photos, maximum: 3
   belongs_to :user
   has_many :bookings
   has_many :availabilities

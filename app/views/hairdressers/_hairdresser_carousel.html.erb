@@ -1,0 +1,11 @@
+<div id="hairdresser-carousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+  <% unless hairdresser.photos.empty? %>
+    <% hairdresser.photos.each_with_index do |photo, index| %>
+      <div class="card-image item <%= "active" if index == 0 %>">
+        <%= cl_image_tag photo.path, width: 400, height: 300, crop: :fill, opacity: 50, background: "black", class: "d-block img-fluid" %>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
