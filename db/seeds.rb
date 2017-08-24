@@ -130,8 +130,14 @@ urls = [
   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
 ]
 
-hairdresser_8.photo_urls = urls
-puts "did not save" unless hairdresser_8.save
+
+num += 1
+
+hairdresser_9 = Hairdresser.new(description: "Cut and styled hair, specializing in hairstyles for bridal and prom parties", city: "London", location: "Salon Brooks and Brooks")
+
+hairdresser_9.photo_urls = urls
+puts "did not save" unless hairdresser_9.save
+
 
 
 # num += 1

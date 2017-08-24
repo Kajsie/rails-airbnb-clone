@@ -22,6 +22,7 @@ gem 'uglifier'
 gem "font-awesome-rails"
 gem 'bootstrap-datepicker-rails'
 
+
 gem 'cloudinary'
 
 gem 'attachinary', github: 'assembler/attachinary'
@@ -35,6 +36,7 @@ gem "gmaps4rails"
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
+
 
 group :development, :test do
   gem 'pry-byebug'
