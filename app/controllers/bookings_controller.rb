@@ -33,6 +33,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:hairdresser).permit(:start_time, :end_time)
+    params.require(:booking).permit(:date, :start_time, :end_time, :hairdresser_id)
   end
 end
