@@ -17,7 +17,7 @@ user_5 = User.create(first_name: "Maxi", last_name: "Baker", email: "max@wagon.c
 user_6 = User.create(first_name: "Kevin", last_name: "Miller", email: "anna@wagon.com", password: "hellohello")
 user_7 = User.create(first_name: "John", last_name: "Anderson", email: "lisa@wagon.com", password: "hellohello")
 user_8 = User.create(first_name: "Michael", last_name: "Walker", email: "mia@wagon.com", password: "hellohello")
-user_9 = User.create(first_name: "Susan", last_name: "Adams", email: "susan@wagon.com", password: "hellohello")
+# user_9 = User.create(first_name: "Susan", last_name: "Adams", email: "susan@wagon.com", password: "hellohello")
 # user_10 = User.create(first_name: "Carol", last_name: "Allen", email: "carol@wagon.com", password: "hellohello")
 # user_11 = User.create(first_name: "Katrin", last_name: "Miller", email: "katrin@wagon.com", password: "hellohello")
 # user_12 = User.create(first_name: "Martha", last_name: "Smith", email: "martha@wagon.com", password: "hellohello")
@@ -131,12 +131,18 @@ urls = [
 ]
 
 
-num += 1
+# num += 1
 
-hairdresser_9 = Hairdresser.new(description: "Cut and styled hair, specializing in hairstyles for bridal and prom parties", city: "London", location: "Salon Brooks and Brooks")
+# hairdresser_9 = Hairdresser.new(description: "Cut and styled hair, specializing in hairstyles for bridal and prom parties", city: "London", location: "Salon Brooks and Brooks")
 
-hairdresser_9.photo_urls = urls
-puts "did not save" unless hairdresser_9.save
+# hairdresser_9.user = user_9
+# urls = [
+#   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+#   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+# ]
+
+# hairdresser_9.photo_urls = urls
+# puts "did not save" unless hairdresser_9.save
 
 
 
