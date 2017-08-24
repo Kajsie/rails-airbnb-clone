@@ -1,6 +1,7 @@
 .page-heading {
-  margin-left: 70px;
-  margin-bottom: 30px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 .booking-btn {
@@ -11,3 +12,20 @@ h1 {
   color: #474168;
 }
 
+
+.main-container {
+  height:100%;
+}
+
+.main { }
+
+.main-container {
+  display: flex;
+}
+
+#map {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}

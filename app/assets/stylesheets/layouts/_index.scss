@@ -15,7 +15,7 @@ h1 {
 
 .main-container {
   display: flex;
-  // height: 100vh;
+  height: 1000px;
 }
 
 #map {
@@ -24,4 +24,3 @@ h1 {
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 0 !important;
 }
-
