@@ -6,7 +6,7 @@
 //= require attachinary
 
 //= require bootstrap-datepicker
-
+//= require bootstrap-timepicker
 //= require underscore
 //= require gmaps/google
 

@@ -4,22 +4,27 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @hairdresser = Hairdresser.find(params[:hairdresser_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-
-    start_time = Date.strptime(params[:booking][:start_time] ,'%m/%d/%y')
-    end_time = Date.strptime(params[:booking][:end_time] ,'%m/%d/%y')
+    @booking.hairdresser = Hairdresser.find(params[:hairdresser_id])
+    @booking.user = current_user
+    date = Date.strptime(params[:booking][:date] ,'%m/%d/%y')
+    start_time = Time.strptime(params[:booking][:start_time] ,'%H:%M')
+    end_time = Time.strptime(params[:booking][:end_time] ,'%H:%M')
 
     @booking.start_time = start_time
     @booking.end_time = end_time
 
+    @booking.date = date
+
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to hairdresser_bookings_path(@booking)
     else
-      render "new"
+      render "new_hairdresser_booking_path"
     end
   end
 
@@ -33,6 +38,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :start_time, :end_time, :hairdresser_id)
+    params.require(:booking).permit(:date, :start_time, :end_time)
   end
 end
