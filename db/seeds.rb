@@ -17,7 +17,7 @@ user_5 = User.create(first_name: "Maxi", last_name: "Baker", email: "max@wagon.c
 user_6 = User.create(first_name: "Kevin", last_name: "Miller", email: "anna@wagon.com", password: "hellohello")
 user_7 = User.create(first_name: "John", last_name: "Anderson", email: "lisa@wagon.com", password: "hellohello")
 user_8 = User.create(first_name: "Michael", last_name: "Walker", email: "mia@wagon.com", password: "hellohello")
-user_9 = User.create(first_name: "Susan", last_name: "Adams", email: "susan@wagon.com", password: "hellohello")
+# user_9 = User.create(first_name: "Susan", last_name: "Adams", email: "susan@wagon.com", password: "hellohello")
 # user_10 = User.create(first_name: "Carol", last_name: "Allen", email: "carol@wagon.com", password: "hellohello")
 # user_11 = User.create(first_name: "Katrin", last_name: "Miller", email: "katrin@wagon.com", password: "hellohello")
 # user_12 = User.create(first_name: "Martha", last_name: "Smith", email: "martha@wagon.com", password: "hellohello")
@@ -29,86 +29,129 @@ user_9 = User.create(first_name: "Susan", last_name: "Adams", email: "susan@wago
 num = 10
 
 
-hairdresser_1 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "The Lounge Soho")
+hairdresser_1 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "26 Peter St, Soho, London", location: "The Lounge Soho")
 
 hairdresser_1.user = user_1
-hairdresser_1.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
+urls = [
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+]
+
+hairdresser_1.photo_urls = urls
 
 puts "did not save" unless hairdresser_1.save
 
 num += 1
 
-
-
-hairdresser_2 = Hairdresser.new(description: "Specialized in hair coloring", city: "London", location: "Salon Hairflair")
+hairdresser_2 = Hairdresser.new(description: "Specialized in hair coloring", city: "London", street: "334 Kilburn Ln, Queen's Park, London", location: "Salon Hairflair")
 
 hairdresser_2.user = user_2
-hairdresser_2.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
+urls = [
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+]
+
+hairdresser_2.photo_urls = urls
 puts "did not save" unless hairdresser_2.save
 
 num += 1
 
 
-hairdresser_3 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Saco")
+hairdresser_3 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "4 Charlotte Pl, Fitzrovia, London", location: "Salon Saco")
 
 hairdresser_3.user = user_3
-hairdresser_3.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
+urls = [
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+]
+
+hairdresser_3.photo_urls = urls
 puts "did not save" unless hairdresser_3.save
 
 num += 1
 
-hairdresser_4 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Atherton Cox")
+hairdresser_4 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "18 New Cavendish St, Marylebone, London", location: "Salon Atherton Cox")
 
 hairdresser_4.user = user_4
-hairdresser_4.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
+urls = [
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+]
+
+hairdresser_4.photo_urls = urls
 puts "did not save" unless hairdresser_4.save
 
 num += 1
 
-hairdresser_5 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Aveda Institute")
+hairdresser_5 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "174-177 High Holborn, London", location: "Salon Aveda Institute")
 
 hairdresser_5.user = user_5
-hairdresser_5.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
+urls = [
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+]
+
+hairdresser_5.photo_urls = urls
 puts "did not save" unless hairdresser_5.save
 
 num += 1
 
-hairdresser_6 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Windle & Moodie")
+hairdresser_6 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "41-45 Shorts Gardens, London", location: "Salon Windle & Moodie")
 
 hairdresser_6.user = user_6
-hairdresser_6.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
+urls = [
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+]
+
+hairdresser_6.photo_urls = urls
 puts "did not save" unless hairdresser_6.save
 
 num += 1
 
-hairdresser_7 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon HARE & BONE")
+hairdresser_7 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "69 Great Titchfield St, Fitzrovia, London", location: "Salon HARE & BONE")
 
 hairdresser_7.user = user_7
-hairdresser_7.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
+urls = [
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+]
+
+hairdresser_7.photo_urls = urls
 puts "did not save" unless hairdresser_7.save
 
 num += 1
 
-hairdresser_8 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Charles Worthington")
+hairdresser_8 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "28 Great Queen St, London", location: "Salon Charles Worthington")
 
 hairdresser_8.user = user_8
-hairdresser_8.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
-puts "did not save" unless hairdresser_8.save
+urls = [
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+]
 
-num += 1
 
-hairdresser_9 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Brooks and Brooks")
+# num += 1
 
-hairdresser_9.user = user_9
-hairdresser_9.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
-puts "did not save" unless hairdresser_9.save
+# hairdresser_9 = Hairdresser.new(description: "Cut and styled hair, specializing in hairstyles for bridal and prom parties", city: "London", location: "Salon Brooks and Brooks")
+
+# hairdresser_9.user = user_9
+# urls = [
+#   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+#   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+# ]
+
+# hairdresser_9.photo_urls = urls
+# puts "did not save" unless hairdresser_9.save
+
+
 
 # num += 1
 
 # hairdresser_10 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Stuart Phillips")
 
 # hairdresser_10.user = user_10
-# hairdresser_10.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
+# hairdresser_10.photo_urls = ["http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"]
 # puts "did not save" unless hairdresser_10.save
 
 # num += 1

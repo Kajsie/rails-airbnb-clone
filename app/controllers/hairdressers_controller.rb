@@ -1,7 +1,17 @@
 class HairdressersController < ApplicationController
+
   def index
-    @hairdressers = Hairdresser.all
+    @hairdressers = Hairdresser.where.not(latitude: nil, longitude: nil)
+
+    @hash = Gmaps4rails.build_markers(@hairdressers) do |hairdresser, marker|
+      marker.lat hairdresser.latitude
+      marker.lng hairdresser.longitude
+      # marker.infowindow render_to_string(partial: "/hairdressers/map_box", locals: { hairdresser: hairdresser })
+    end
   end
+  # def index
+  #   @hairdressers = Hairdresser.all
+  # end
 
   def show
     @hairdresser = Hairdresser.find(params[:id])
@@ -22,14 +32,20 @@ class HairdressersController < ApplicationController
       redirect_to hairdressers_path
     else
       @hairdressers = Hairdresser.where(city: params[:search][:city].capitalize)
-      render :index
+
+      @hash = Gmaps4rails.build_markers(@hairdressers) do |hairdresser, marker|
+        marker.lat hairdresser.latitude
+        marker.lng hairdresser.longitude
+      # marker.infowindow render_to_string(partial: "/hairdressers/map_box", locals: { hairdresser: hairdresser })
     end
+      render :index
   end
+end
 
-  private
+private
 
-  def hairdresser_params
-    params.require(:hairdresser).permit(:description, :city, :location, :photo)
-  end
+def hairdresser_params
+  params.require(:hairdresser).permit(:description, :city, :location, :photo)
+end
 
 end

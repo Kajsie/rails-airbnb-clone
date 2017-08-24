@@ -1,5 +1,5 @@
 class Hairdresser < ApplicationRecord
-  has_attachment :photo
+  has_attachments :photos, maximum: 3
   belongs_to :user
   has_many :bookings
   has_many :availabilities
@@ -32,7 +32,9 @@ class Hairdresser < ApplicationRecord
     # else
       # return false
     # end
-  # end
+  #end 
+  geocoded_by :street
+  after_validation :geocode, if: :street_changed?
 end
 
 

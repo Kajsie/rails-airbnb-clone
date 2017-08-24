@@ -5,7 +5,7 @@
 
     <div class="col-xs-12 col-sm-3 col-sm-offset-1">
 
-    <%= cl_image_tag @hairdresser.photo.path, width: 400, height: 300, crop: :fit, class: "hairdresser-img" %>
+    <%= cl_image_tag @hairdresser.photos.first.path, width: 400, height: 300, crop: :fit, class: "hairdresser-img" %>
 
 
 
@@ -24,13 +24,12 @@
 
     <div class="col-xs-12 col-sm-3 booking-calendar">
 
-      <!-- month_calendar do |date| %> -->
-      <!-- date %> -->
-      <!-- end %> -->
+      <%= month_calendar do |date| %>
+      <%= date.day %>
+      <% end %>
 
-      <%= image_tag "Calendar.png", class: "calendar-img"%>
+      <%= link_to "Continue to booking", new_booking_path(@booking), class: "btn btn-primary" %>
 
-      <button type="button" class="btn btn-primary"><%= link_to "Continue to booking", new_booking_path(@booking), class: "btn-primary" %></button>
     </div>
 
   </div>
