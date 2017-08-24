@@ -97,7 +97,7 @@ puts "did not save" unless hairdresser_8.save
 
 num += 1
 
-hairdresser_9 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Brooks and Brooks")
+hairdresser_9 = Hairdresser.new(description: "Cut and styled hair, specializing in hairstyles for bridal and prom parties", city: "London", location: "Salon Brooks and Brooks")
 
 hairdresser_9.user = user_9
 hairdresser_9.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
