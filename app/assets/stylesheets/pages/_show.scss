@@ -47,3 +47,32 @@
   align-items: center;
   flex-direction: column;
 }
+
+.simple-calendar {
+  text-align: center;
+  .day {}
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    border: solid #d6d6d6 2px;
+  }
+  .past {
+    background-color: #ededed;
+  }
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month {}
+  .current-month {}
+
+  .has-events {}
+}
