@@ -16,7 +16,7 @@ user_4 = User.create(first_name: "Tim", last_name: "Taylor", email: "tim@wagon.c
 user_5 = User.create(first_name: "Maxi", last_name: "Baker", email: "max@wagon.com", password: "hellohello")
 user_6 = User.create(first_name: "Kevin", last_name: "Miller", email: "anna@wagon.com", password: "hellohello")
 user_7 = User.create(first_name: "John", last_name: "Anderson", email: "lisa@wagon.com", password: "hellohello")
-user_8 = User.create(first_name: "Michael", last_name: "Walker", email: "mia@wagon.com", password: "hellohello")
+# user_8 = User.create(first_name: "Michael", last_name: "Walker", email: "mia@wagon.com", password: "hellohello")
 # user_9 = User.create(first_name: "Susan", last_name: "Adams", email: "susan@wagon.com", password: "hellohello")
 # user_10 = User.create(first_name: "Carol", last_name: "Allen", email: "carol@wagon.com", password: "hellohello")
 # user_11 = User.create(first_name: "Katrin", last_name: "Miller", email: "katrin@wagon.com", password: "hellohello")
@@ -120,15 +120,15 @@ urls = [
 hairdresser_7.photo_urls = urls
 puts "did not save" unless hairdresser_7.save
 
-num += 1
+# num += 1
 
-hairdresser_8 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "28 Great Queen St, London", location: "Salon Charles Worthington")
+# hairdresser_8 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "28 Great Queen St, London", location: "Salon Charles Worthington")
 
-hairdresser_8.user = user_8
-urls = [
-  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
-  "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
-]
+# hairdresser_8.user = user_8
+# urls = [
+#   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
+#   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
+# ]
 
 
 # num += 1
