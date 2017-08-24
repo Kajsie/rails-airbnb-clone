@@ -98,6 +98,7 @@ num += 1
 
 hairdresser_6 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "41-45 Shorts Gardens, London", location: "Salon Windle & Moodie")
 
+hairdresser_6.user = user_6
 urls = [
   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num + 1}.jpg"
