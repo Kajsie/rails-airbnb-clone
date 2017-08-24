@@ -6,7 +6,7 @@ class HairdressersController < ApplicationController
     @hash = Gmaps4rails.build_markers(@hairdressers) do |hairdresser, marker|
       marker.lat hairdresser.latitude
       marker.lng hairdresser.longitude
-      # marker.infowindow render_to_string(partial: "/hairdressers/map_box", locals: { hairdresser: hairdresser })
+      marker.infowindow render_to_string(partial: "/hairdressers/map_box", locals: { hairdresser: hairdresser })
     end
   end
   # def index
@@ -36,7 +36,7 @@ class HairdressersController < ApplicationController
       @hash = Gmaps4rails.build_markers(@hairdressers) do |hairdresser, marker|
         marker.lat hairdresser.latitude
         marker.lng hairdresser.longitude
-      # marker.infowindow render_to_string(partial: "/hairdressers/map_box", locals: { hairdresser: hairdresser })
+        marker.infowindow render_to_string(partial: "/hairdressers/map_box", locals: { hairdresser: hairdresser })
     end
       render :index
   end
