@@ -1,0 +1,28 @@
+.map-card p {
+  color: grey;
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+
+.map-card a:hover {
+  text-decoration: none;
+  font-size: 10px;
+  color: black;
+}
+
+.card-description {
+  margin-top: 20px;
+}
+
+.map-card-user {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.map-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
