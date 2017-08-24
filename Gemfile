@@ -21,6 +21,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem "font-awesome-rails"
 gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-timepicker-rails-addon'
 
 
 gem 'cloudinary'
