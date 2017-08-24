@@ -1,79 +1,63 @@
-
-<% if action_name == "search" %>
-<h1 class="page-heading">Hairdressers in <%= params[:search][:city].capitalize %></h1>
-<% end %>
-
-<div class="container">
-  <div class="row">
-
-    <div class="col-xs-8">
-
-      <div class="row">
-        <% @hairdressers.each do |hairdresser| %>
-          <div class="col-xs-12 col-sm-6">
-           <div class="card">
-              <%= render "hairdresser_carousel", hairdresser: hairdresser %>
-              <div class="card-image">
-                <%= link_to(hairdresser) do %>
-                <%= cl_image_tag hairdresser.photos.first.path, width: 400, height: 300, crop: :fit, class: "card-user" %>
-                <div class="card-hover">
-                 <div class="card-hairdresser">
-                  <h2><%= hairdresser.user.first %> <%= hairdresser.user %> </h2>
-
-                  </div>
-                  <div class="card-description">
-                    <p>
-                      <br><b>Location:</b></br> <%= hairdresser.location %>
-                    </p>
-                    <p>
-                      <br><b>Description:</b></br> <%= hairdresser.description %>
-                    </p>
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="row">
+          <% if action_name == "search" %>
+            <h1 class="page-heading">Hairdressers in <%= params[:search][:city].capitalize %></h1>
+          <% end %>
+          <% @hairdressers.each do |hairdresser| %>
+            <div class="col-xs-12 col-sm-6">
+             <div class="card">
+                <%= render "hairdresser_carousel", hairdresser: hairdresser %>
+                <div class="card-image">
+                  <%= link_to(hairdresser) do %>
+                  <%= cl_image_tag hairdresser.photos.first.path, width: 400, height: 300, crop: :fit, class: "card-user" %>
+                  <div class="card-hover">
+                   <div class="card-hairdresser">
+                      <h2><%= hairdresser.user.first %> <%= hairdresser.user %> </h2>
+                    </div>
+                    <div class="card-description">
+                      <p>
+                        <br><b>Location:</b></br> <%= hairdresser.location %>
+                      </p>
+                      <p>
+                        <br><b>Description:</b></br> <%= hairdresser.description %>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card-hairdresser">
-                <h2><%= hairdresser.user.first_name + " " +
-                  hairdresser.user.last_name
-                  %>
-                </h2>
+                <div class="card-hairdresser">
+                  <h2><%= hairdresser.user.first_name + " " +
+                    hairdresser.user.last_name
+                    %>
+                  </h2>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
+        </div>
+      </div>
 
-      <% end %>
-      <% end %>
+      <div id="map" ></div>
 
+      <% content_for(:after_js) do %>
+        <script>
+          $(document).ready(function() {
+            var handler = Gmaps.build('Google');
+            handler.buildMap({ internal: { id: 'map' } }, function() {
+              markers = handler.addMarkers(<%= raw @hash.to_json %>);
+              handler.bounds.extendWith(markers);
+              handler.fitMapToBounds();
+              if (markers.length == 0) {
+                handler.getMap().setZoom(2);
+              } else if (markers.length == 1) {
+                handler.getMap().setZoom(14);
+              }
+            });
+          });
+        </script>
+      <% end %>
     </div>
-
-
   </div>
-
-
-  <div class="col-xs-4">
-
-
-    <div id="map" style="width: 100%; height: 600px;"></div>
-
-    <% content_for(:after_js) do %>
-    <script>
-      $(document).ready(function() {
-        var handler = Gmaps.build('Google');
-        handler.buildMap({ internal: { id: 'map' } }, function() {
-          markers = handler.addMarkers(<%= raw @hash.to_json %>);
-          handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();
-          if (markers.length == 0) {
-            handler.getMap().setZoom(2);
-          } else if (markers.length == 1) {
-            handler.getMap().setZoom(14);
-          }
-        });
-      });
-    </script>
-    <% end %>
-
-  </div>
-
-</div>
-
 </div>

@@ -29,7 +29,7 @@ user_9 = User.create(first_name: "Susan", last_name: "Adams", email: "susan@wago
 num = 10
 
 
-hairdresser_1 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "The Lounge Soho")
+hairdresser_1 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "26 Peter St, Soho, London", location: "The Lounge Soho")
 
 hairdresser_1.user = user_1
 urls = [
@@ -43,9 +43,7 @@ puts "did not save" unless hairdresser_1.save
 
 num += 1
 
-
-
-hairdresser_2 = Hairdresser.new(description: "Specialized in hair coloring", city: "London", location: "Salon Hairflair")
+hairdresser_2 = Hairdresser.new(description: "Specialized in hair coloring", city: "London", street: "334 Kilburn Ln, Queen's Park, London", location: "Salon Hairflair")
 
 hairdresser_2.user = user_2
 urls = [
@@ -59,7 +57,7 @@ puts "did not save" unless hairdresser_2.save
 num += 1
 
 
-hairdresser_3 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Saco")
+hairdresser_3 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "4 Charlotte Pl, Fitzrovia, London", location: "Salon Saco")
 
 hairdresser_3.user = user_3
 urls = [
@@ -72,7 +70,7 @@ puts "did not save" unless hairdresser_3.save
 
 num += 1
 
-hairdresser_4 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Atherton Cox")
+hairdresser_4 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "18 New Cavendish St, Marylebone, London", location: "Salon Atherton Cox")
 
 hairdresser_4.user = user_4
 urls = [
@@ -85,7 +83,7 @@ puts "did not save" unless hairdresser_4.save
 
 num += 1
 
-hairdresser_5 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Aveda Institute")
+hairdresser_5 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "174-177 High Holborn, London", location: "Salon Aveda Institute")
 
 hairdresser_5.user = user_5
 urls = [
@@ -98,7 +96,7 @@ puts "did not save" unless hairdresser_5.save
 
 num += 1
 
-hairdresser_6 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Windle & Moodie")
+hairdresser_6 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "41-45 Shorts Gardens, London", location: "Salon Windle & Moodie")
 
 urls = [
   "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg",
@@ -110,7 +108,7 @@ puts "did not save" unless hairdresser_6.save
 
 num += 1
 
-hairdresser_7 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon HARE & BONE")
+hairdresser_7 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "69 Great Titchfield St, Fitzrovia, London", location: "Salon HARE & BONE")
 
 hairdresser_7.user = user_7
 urls = [
@@ -123,7 +121,7 @@ puts "did not save" unless hairdresser_7.save
 
 num += 1
 
-hairdresser_8 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Charles Worthington")
+hairdresser_8 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "28 Great Queen St, London", location: "Salon Charles Worthington")
 
 hairdresser_8.user = user_8
 urls = [
@@ -134,7 +132,6 @@ urls = [
 hairdresser_8.photo_urls = urls
 puts "did not save" unless hairdresser_8.save
 
-num += 1
 
 # num += 1
 
