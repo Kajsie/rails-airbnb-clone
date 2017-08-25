@@ -1,6 +1,5 @@
 .container {
   margin-top: 70px;
-  box-shadow: 1px;
 }
 
 .form-div {
@@ -23,5 +22,42 @@ h1 {
   padding: 10px 30px;
   border-radius: 3px;
   color: white;
+  margin-top: 10px;
+}
+
+h2 {
+  color: #474168;
+  margin-bottom: 40px;
+}
+
+.text-center {
+a {
+  text-align: center;
+  display: block;
+  color: #626F92;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #272637;
+}
+
+p .link {
+  color: #626F92;
+}
+}
+
+.small-text {
+  text-align: center;
   margin-top: 30px;
 }
+
+a {
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  color: #626F92;
+}
+
