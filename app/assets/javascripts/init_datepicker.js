@@ -9,19 +9,18 @@ $('.datepicker').datepicker({"format": "mm/dd/yyyy", "weekStart":1,
 
 
 $('#timepicker1').timepicker({
-                minuteStep: 30,
-                template: 'dropdown',
-                appendWidgetTo: 'body',
+               minuteStep: 30,
                 showSeconds: false,
                 showMeridian: false,
                 defaultTime: false,
+
+
             });
 
 $('#timepicker2').timepicker({
-                minuteStep: 30,
-                template: 'dropdown',
-                appendWidgetTo: 'body',
+    minuteStep: 30,
                 showSeconds: false,
                 showMeridian: false,
                 defaultTime: false,
+
             });

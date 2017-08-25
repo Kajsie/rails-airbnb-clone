@@ -28,9 +28,9 @@ class BookingsController < ApplicationController
     @booking.date = date
 
     if @booking.save
-      redirect_to hairdresser_bookings_path(@booking)
+      redirect_to hairdresser_booking_path(@booking)
     else
-      render "show"
+      render 'show'
     end
   end
 
