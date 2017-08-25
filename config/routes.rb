@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users
 
+  resources :reviews, only: :destroy
   resources :hairdressers, only: [:index, :show] do
     resources :reviews, only: :create
     collection do
