@@ -1,17 +1,17 @@
 .name-heading {
-  margin-bottom: 50px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 23px;
 }
 
 .hairdresser-img {
-  // height: 300px;
   width: 220px;
+  max-height: 450px;
+  object-fit: cover;
 }
 
 .hairdresser-location {
   margin-top: 10px;
   font-size: 23px;
-  line-height: 0;
 }
 
 .hairdresser-description {
@@ -26,6 +26,8 @@
 .sample-img {
   margin-bottom: 50px;
   width: 360px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .table-availabilities {
@@ -40,6 +42,13 @@
 .booking-btn {
   margin-top: 20px;
   color: white;
+  background-color: #626F92;
+  border-color: white;
+}
+
+.booking-btn:hover {
+  background-color: #ccc;
+  border-color: white;
 }
 
 #small-map {
