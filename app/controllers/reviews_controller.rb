@@ -4,10 +4,21 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.hairdresser = @hairdresser
     if @review.save
-      redirect_to hairdresser_path(@hairdresser)
+      respond_to do |format|
+        format.html { redirect_to hairdresser_path(@hairdresser) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render 'hairdressers/show'
+      respond_to do |format|
+        format.html { render 'hairdressers/show' }
+        format.js  # <-- idem
+      end
     end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
   end
 
   private
@@ -16,3 +27,7 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:content)
   end
 end
+
+
+
+

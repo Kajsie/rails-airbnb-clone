@@ -1,1 +1,4 @@
-<p><%= review.content %></p>
+<p>
+<%= review.content %>
+<%= link_to "Delete", review, method: :delete, remote: true, class: "delete-link" %>
+</p>

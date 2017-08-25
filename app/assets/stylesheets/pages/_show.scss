@@ -1,5 +1,6 @@
 .name-heading {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
 
 .hairdresser-img {
@@ -8,6 +9,7 @@
 }
 
 .hairdresser-location {
+  margin-top: 10px;
   font-size: 23px;
   line-height: 0;
 }
@@ -54,6 +56,17 @@
 
 .review-box {
   margin-bottom: 30px;
+}
+
+.delete-link {
+  color: blue;
+  font-size: 10px;
+}
+
+.delete-link:hover {
+  text-decoration: none;
+  color: darkblue;
+  font-size: 10px;
 }
 
 

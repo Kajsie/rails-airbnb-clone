@@ -1,8 +1,7 @@
 <div class="show-container">
 
-
   <div class="container">
-    <h2 class="name-heading text-center"><%= @hairdresser.user.first_name + " " + @hairdresser.user.last_name %></h2>
+    <h2 class="name-heading"><%= @hairdresser.user.first_name + " " + @hairdresser.user.last_name %></h2>
     <div class="row">
 
       <div class="col-xs-12 col-sm-3">
@@ -104,14 +103,17 @@
 
         <div class="review-box">
 
-          <h4><%= pluralize @hairdresser.reviews.size, "review" %></h4>
+          <h4>Reviews</h4>
 
           <div id="reviews">
             <% if @hairdresser.reviews.blank? %>
             Be the first to leave a review for <%= @hairdresser.user.first_name + " " + @hairdresser.user.last_name %>
             <% else %>
             <% @hairdresser.reviews.each do |review| %>
-            <%= render 'reviews/show', review: review %>
+            <p data-review-id="<%= review.id %>">
+              <%= render 'reviews/show', review: review %>
+
+            </p>
             <% end %>
             <% end %>
           </div>
