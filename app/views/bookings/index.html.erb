@@ -4,14 +4,19 @@
       <div class="message">
           <h1>Your bookings</h1>
         <div class="message-name">
-          <h3>@hairdresser.name</h3>
-          <p>@booking.date</p>
+          <ul>
+            <%= @hairdressers.each do |hairdresser| %>
+              <li><%= hairdresser.name %></li>
+              <li><%= hairdresser.date %></li>
+              <li><%= hairdresser.time %></li>
+            <%= end %>
+          </ul>
         </div>
         <div class="message-body">
-          <p>Some message from the hair dresser</p>
+          <p>Thank you for booking an appointment with me. when I am available I will contact you as soon as I can to make further arrangements. </p>
         </div>
         <div class="message-status">
-          <p class="status pending">Pending</p>
+          <p class="status pending">Current Status: Pending</p>
           <p class="price">To be determined</p>
           <%= link_to "Book Another Hairdresser", root_path %>
         </div>
@@ -20,5 +25,12 @@
   </div>
 </div>
 
+<ul>
+  <%= @hairdressers.each do |hairdresser| %>
+    <li><%= hairdresser.name %></li>
+    <li><%= hairdresser.date %></li>
+    <li><%= hairdresser.time %></li>
+  <%= end %>
+</ul>
 
 
