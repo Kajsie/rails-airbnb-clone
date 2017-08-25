@@ -38,7 +38,7 @@ class BookingsController < ApplicationController
     booking = Booking.find(params[:id])
 
     booking.destroy
-    redirect_to root_path
+    redirect_to root
   end
 
   private
