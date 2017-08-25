@@ -1,12 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
+    <div class="col-xs-4 col-xs-offset-4 form-div">
       <h1 class="text-center">Book your hairdresser</h1>
         <%= simple_form_for [@hairdresser, @booking] do |f| %>
       <%= f.input :date, as: :string, input_html: { class: 'datepicker'} %>
        <%= f.input :start_time, as: :string, input_html: { id: 'timepicker1'} %>
        <%= f.input :end_time, as: :string, input_html: { id: 'timepicker2'}%>
-       <%= f.submit :submit %>
+       <div class="text-center">
+        <%= f.submit :submit, class: "button" %>
+       </div>
         <% end %>
     </div>
   </div>
