@@ -1,19 +1,24 @@
-<div class="container" style="border:thin">
+<div class="container">
   <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-      <h1>Confirmation</h1>
-
- <div class="message">
-
-  <%= render 'shared/hairdresser' %>
-  <div class="message-name">
-    <p>Date:</p>
-  </div>
-  <div class="message-body">
-    <p><%= Time.now %></p>
-  </div>
-  <%= link_to "Delete", root_path %>
-</div>
+    <div class="col-xs-12 col-xs-offset-2">
+      <div class="message">
+          <h1>Your bookings</h1>
+        <div class="message-name">
+          <h3>@hairdresser.name</h3>
+          <p>@booking.date</p>
+        </div>
+        <div class="message-body">
+          <p>Some message from the hair dresser</p>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Pending</p>
+          <p class="price">To be determined</p>
+          <%= link_to "Book Another Hairdresser", root_path %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+

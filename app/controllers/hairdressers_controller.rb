@@ -16,6 +16,12 @@ class HairdressersController < ApplicationController
   def show
     @hairdresser = Hairdresser.find(params[:id])
     @availability = Availability.new
+
+    @hash = Gmaps4rails.build_markers(@hairdresser) do |hairdresser, marker|
+      marker.lat hairdresser.latitude
+      marker.lng hairdresser.longitude
+      marker.infowindow render_to_string(partial: "/hairdressers/map_box", locals: { hairdresser: hairdresser })
+    end
   end
 
   def new

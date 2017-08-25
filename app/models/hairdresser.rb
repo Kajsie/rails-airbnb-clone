@@ -3,6 +3,7 @@ class Hairdresser < ApplicationRecord
   belongs_to :user
   has_many :bookings
   has_many :availabilities
+  has_many :reviews, dependent: :destroy
   validates :city, :location, :description, presence: true
   validates :user, presence: true
 
@@ -33,7 +34,7 @@ class Hairdresser < ApplicationRecord
     # else
       # return false
     # end
-  #end 
+  #end
   geocoded_by :street
   after_validation :geocode, if: :street_changed?
 end

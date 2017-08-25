@@ -22,9 +22,8 @@
 }
 
 .sample-img {
-  margin-right: 10px;
   margin-bottom: 50px;
-  width: 300px;
+  width: 360px;
 }
 
 .table-availabilities {
@@ -37,61 +36,75 @@
 }
 
 .booking-btn {
-  margin: 10px;
+  margin-top: 20px;
   color: white;
 }
 
-.booking-calendar {
+#small-map {
+  flex: 0 1 450px;
+  height: 50vh;
+  // position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}
+
+.show-container {
+  height:100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
 }
 
-.simple-calendar {
-  text-align: center;
-  .day {}
 
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
 
-  .today {
-    border: solid #d6d6d6 2px;
-  }
-  .past {
-    background-color: #ededed;
-  }
-  .future {}
+// .booking-calendar {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   flex-direction: column;
+// }
 
-  .start-date {}
+// .simple-calendar {
+//   text-align: center;
+//   .day {}
 
-  .prev-month {}
-  .next-month {}
-  .current-month {}
+//   .wday-0 {}
+//   .wday-1 {}
+//   .wday-2 {}
+//   .wday-3 {}
+//   .wday-4 {}
+//   .wday-5 {}
+//   .wday-6 {}
 
-  .has-events {}
-}
+//   .today {
+//     border: solid #d6d6d6 2px;
+//   }
+//   .past {
+//     background-color: #ededed;
+//   }
+//   .future {}
 
-.calendar-heading {
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
+//   .start-date {}
 
-.calendar-heading a:hover {
-  text-decoration: none;
-}
+//   .prev-month {}
+//   .next-month {}
+//   .current-month {}
 
-.table-striped thead tr th {
-  font-family: "Open Sans", "Helvetica", "sans-serif";
-  font-weight: lighter;
-}
+//   .has-events {}
+// }
 
-.table-striped tbody tr td {
-  font-family: "Open Sans", "Helvetica", "sans-serif";
-  font-weight: lighter;
-}
+// .calendar-heading {
+//   margin-bottom: 10px;
+//   margin-top: 0px;
+// }
+
+// .calendar-heading a:hover {
+//   text-decoration: none;
+// }
+
+// .table-striped thead tr th {
+//   font-family: "Open Sans", "Helvetica", "sans-serif";
+//   font-weight: lighter;
+// }
+
+// .table-striped tbody tr td {
+//   font-family: "Open Sans", "Helvetica", "sans-serif";
+//   font-weight: lighter;
+// }
