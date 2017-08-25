@@ -8,7 +8,6 @@
     <%= cl_image_tag @hairdresser.photos.first.path, width: 400, height: 300, crop: :fit, class: "hairdresser-img" %>
 
 
-
     </div>
 
 
@@ -20,6 +19,8 @@
       <p class="hairdresser-description">Some more information about myself: </p>
       <p><%= @hairdresser.description %></p>
 
+      <%= link_to "Book this Hairdresser", new_hairdresser_booking_path(@hairdresser), class: "btn btn-primary" %>
+
     </div>
 
     <div class="col-xs-12 col-sm-3 booking-calendar">
@@ -28,7 +29,6 @@
       <%= date.day %>
       <% end %>
 
-      <%= link_to "Continue to booking", new_hairdresser_booking_path(@hairdresser), class: "btn btn-primary" %>
 
     </div>
 
