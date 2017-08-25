@@ -5,7 +5,7 @@
 
       <div class="col-xs-12 col-sm-3">
 
-        <%= cl_image_tag @hairdresser.photos.first.path, width: 400, height: 300, crop: :fit, class: "hairdresser-img" %>
+        <%= cl_image_tag @hairdresser.photos.second.path, width: 400, height: 300, crop: :fit, class: "hairdresser-img" %>
 
         <%= link_to "Book this Hairdresser", new_hairdresser_booking_path(@hairdresser), class: "btn btn-primary booking-btn" %>
 
