@@ -134,7 +134,7 @@ puts "did not save" unless hairdresser_7.save
 
 # num += 1
 
-# hairdresser_9 = Hairdresser.new(description: "Cut and styled hair, specializing in hairstyles for bridal and prom parties", city: "London", location: "Salon Brooks and Brooks")
+# hairdresser_9 = Hairdresser.new(description: "Cut and styled hair, specializing in hairstyles for bridal and prom parties", city: "London", street: "", location: "Salon Brooks and Brooks")
 
 # hairdresser_9.user = user_9
 # urls = [
@@ -149,7 +149,7 @@ puts "did not save" unless hairdresser_7.save
 
 # num += 1
 
-# hairdresser_10 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Stuart Phillips")
+# hairdresser_10 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "", location: "Salon Stuart Phillips")
 
 # hairdresser_10.user = user_10
 # hairdresser_10.photo_urls = ["http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"]
@@ -157,7 +157,7 @@ puts "did not save" unless hairdresser_7.save
 
 # num += 1
 
-# hairdresser_11 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Stuart Phillips")
+# hairdresser_11 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "", location: "Salon Stuart Phillips")
 
 # hairdresser_11.user = user_11
 # hairdresser_11.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
@@ -165,7 +165,7 @@ puts "did not save" unless hairdresser_7.save
 
 # num += 1
 
-# hairdresser_12 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Stuart Phillips")
+# hairdresser_12 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "", location: "Salon Stuart Phillips")
 
 # hairdresser_12.user = user_12
 # hairdresser_12.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
@@ -173,21 +173,21 @@ puts "did not save" unless hairdresser_7.save
 
 # num += 1
 
-# hairdresser_13 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Stuart Phillips")
+# hairdresser_13 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "", location: "Salon Stuart Phillips")
 
 # hairdresser_13.user = user_13
 # hairdresser_13.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
 # puts "did not save" unless hairdresser_13.save
 
 
-# hairdresser_14 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Stuart Phillips")
+# hairdresser_14 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "", location: "Salon Stuart Phillips")
 
 # hairdresser_14.user = user_14
 # hairdresser_14.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"
 # puts "did not save" unless hairdresser_14.save
 
 
-# hairdresser_15 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", location: "Salon Stuart Phillips")
+# hairdresser_15 = Hairdresser.new(description: "Worked in Paris for 5 years", city: "London", street: "", location: "Salon Stuart Phillips")
 
 # hairdresser_15.user = user_15
 # hairdresser_15.photo_url = "http://res.cloudinary.com/ariane/image/upload/v1503490126/#{num}.jpg"

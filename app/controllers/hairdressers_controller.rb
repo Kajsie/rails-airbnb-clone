@@ -15,6 +15,7 @@ class HairdressersController < ApplicationController
 
   def show
     @hairdresser = Hairdresser.find(params[:id])
+    @review = Review.new
     @availability = Availability.new
 
     @hash = Gmaps4rails.build_markers(@hairdresser) do |hairdresser, marker|
