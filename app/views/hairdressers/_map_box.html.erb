@@ -1,6 +1,6 @@
 <div class="map-card">
   <%= link_to(hairdresser) do %>
-  <%= cl_image_tag hairdresser.photos.first.path, width: 400, height: 300, crop: :fit, class: "map-card-user" %>
+  <%= cl_image_tag hairdresser.photos.second.path, width: 400, height: 300, crop: :fit, class: "map-card-user" %>
   <div class="map-box-heading">
 
     <p><%= hairdresser.user.first_name %> <%= hairdresser.user.last_name %> </p>
