@@ -30,7 +30,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to hairdresser_bookings_path(@booking)
     else
-      render "new_hairdresser_booking_path"
+      render "show"
     end
   end
 
