@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :hairdressers, only: [:index, :show] do
+    resources :reviews, only: :create
     collection do
       get :search
     end
