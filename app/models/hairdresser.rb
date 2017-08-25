@@ -20,7 +20,7 @@ class Hairdresser < ApplicationRecord
 
     # retrieve hairdresser and its availability
     # hairdresser_chosen = @booking.hairdresser
-    # availability = @availability.hairdresser_chosen
+    # availability = hairdresser_chosen.availability
 
     # gives working weekday of hairdresser
     # weekday = availability.weekday
