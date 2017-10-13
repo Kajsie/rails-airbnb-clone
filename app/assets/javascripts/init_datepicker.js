@@ -1,26 +1,16 @@
-// $('.datepicker').datepicker({
-//    onSelect: function() {
-//         var dateObject = $(this).datepicker('getDate');
-//     }
-// });
-
 $('.datepicker').datepicker({"format": "mm/dd/yyyy", "weekStart":1,
-"autoclose": true});
-
+  "autoclose": true});
 
 $('#timepicker1').timepicker({
-               minuteStep: 30,
-                showSeconds: false,
-                showMeridian: false,
-                defaultTime: false,
-
-
-            });
+ minuteStep: 30,
+ showSeconds: false,
+ showMeridian: false,
+ defaultTime: false,
+});
 
 $('#timepicker2').timepicker({
-    minuteStep: 30,
-                showSeconds: false,
-                showMeridian: false,
-                defaultTime: false,
-
-            });
+  minuteStep: 30,
+  showSeconds: false,
+  showMeridian: false,
+  defaultTime: false,
+});

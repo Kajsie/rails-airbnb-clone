@@ -1,86 +1,60 @@
 .card {
   height: 175px;
-  // background-size: cover !important;
-  // background-position: center;
   color: black;
   position: relative;
   margin: 10px;
-}
-
-.card .card-image {
-  height: 175px;
-  opacity: 0.9;
-}
-
-.card-user {
-  border-radius: 10px;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: solid white 1px;
-  object-fit: cover;
-}
-.card-hairdresser {
-  border-radius: 50px;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
-.card-hairdresser h2 {
-  font-size: 20px;
-  margin: 0px;
-  color: white;
-}
-
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 3;
-  background: black;
-  opacity: 0;
-  transition: opacity 300ms ease;
-}
-.card .card-image .card-hover {
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  background-color: rgba(255,255,255,0.8);
-  transition: opacity 300ms ease;
-  color: black;
-}
-
-.card .card-image {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card-description {
-  margin-top: 40px;
-  margin-left: 5px;
-  color: #272637;
-  margin-top: 40px;
-}
-
-.card-description p {
-  font-size: 11px;
-}
-
-.card .card-image:hover .card-hover {
-  display: block;
-  opacity: 1;
-}
-
-.card-avatar {
-  display: inline;
-  object-fit: cover;
+  .card-image {
+    height: 175px;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .card-image .card-hover {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.8);
+    transition: opacity 300ms ease;
+    color: black;
+  }
+  .card-image:hover .card-hover {
+    display: block;
+    opacity: 1;
+  }
+  .card-user {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid white 1px;
+    object-fit: cover;
+  }
+  .card-hairdresser {
+    border-radius: 50px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    h2 {
+      font-size: 20px;
+      margin: 0px;
+      color: white;
+    }
+  }
+  .card-avatar {
+    display: inline;
+    object-fit: cover;
+  }
+  .card-description {
+    margin-top: 40px 5px;
+    color: #272637;
+  }
+  p {
+    font-size: 11px;
+  }
 }
